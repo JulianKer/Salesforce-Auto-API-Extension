@@ -1,0 +1,120 @@
+.color-box {
+  margin-top: 10px;
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.record_triggered_flows { background-color: transparent; }
+.screen_flows { background-color: blue; }
+.autolaunched_flows { background-color: goldenrod; }
+.schedule_triggered_flows { background-color: green; }
+
+.hidden { display: none; }
+
+
+
+
+#colorSelect{
+  appearance: none;            /* Elimina el estilo por defecto */
+  background-color: white;     /* Fondo blanco */
+  color: #333;                 /* Color de texto */
+  font-family: 'Segoe UI', sans-serif; /* Fuente más moderna */
+  font-size: 14px;             /* Tamaño de fuente */
+  padding: 8px 8px;
+  border: none;                /* Sin borde */
+  border-radius: 8px;          /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  width: 100%;                 /* Que se adapte al contenedor */
+  max-width: 200px;            /* Opcional: limitar el ancho */
+}
+
+#colorSelect:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #E2E7EA; /* Brillo azul al hacer foco */
+}
+
+
+.flows-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+#contenidoFlujo label,
+.record_triggered_flows label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#contenidoFlujo input,
+#contenidoFlujo select,
+.record_triggered_flows input,
+.record_triggered_flows select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.separador-horizontal{
+  height: 2px;
+  min-width: 100%;
+  background-color: #919191;
+  margin: 20px 0px;
+}
+
+.contenedor_opt_trigg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.opt_rtf,
+.trgg_rtf{
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+}
+
+
+.opt_rtf,
+.trgg_rtf{
+  appearance: none;           
+  background-color: transparent;     
+  color: #333;                 
+  font-family: 'Segoe UI', sans-serif; 
+  font-size: 14px;             
+  border: none;              
+  border-radius: 8px;         
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  width: 100%;                
+  max-width: 200px;           
+}
+
+.opt_rtf:focus,
+.trgg_rtf:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #E2E7EA; 
+}

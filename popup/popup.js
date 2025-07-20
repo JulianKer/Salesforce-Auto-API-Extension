@@ -71,3 +71,27 @@ function setupCopyButton(buttonId, inputElement) {
 
 setupCopyButton("copyBtnLabel", labelInput);
 setupCopyButton("copyBtnOutput", outputInput);
+
+
+
+
+
+
+
+
+
+
+
+
+// Tabs
+document.querySelectorAll(".tab-button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const tab = btn.dataset.tab;
+
+    document.querySelectorAll(".tab-button").forEach(b => b.classList.remove("active"));
+    document.querySelectorAll(".tab-content").forEach(c => c.classList.remove("active"));
+
+    btn.classList.add("active");
+    document.getElementById(tab).classList.add("active");
+  });
+});
