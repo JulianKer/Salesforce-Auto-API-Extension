@@ -151,8 +151,16 @@ body.dark-mode .icon-swap{
   color: #ccc;
 }
 
+body.dark-mode legend{
+  color: #ccc;
+}
+
 body.dark-mode .header{
   border-bottom-color: #919191;
+}
+
+legend{
+  color: #000;
 }
 
 
