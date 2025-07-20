@@ -1,14 +1,24 @@
 const toggle = document.getElementById("darkToggle");
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (toggle.checked) {
-    document.body.classList.add("dark-mode");
-  } else {
-    document.body.classList.remove("dark-mode");
+  const isDarkMode = localStorage.getItem("darkMode") === "true";
+  toggle.checked = isDarkMode;
+  document.body.classList.toggle("dark-mode", isDarkMode);
+
+  const valorformateadoDelLC = localStorage.getItem("valorFormateado")
+  const labelDelLC = localStorage.getItem("valorLabel")
+
+  let label = document.getElementById("labelInput");
+  let formateado = document.getElementById("output");
+
+  if (label && formateado) {
+    label.value = labelDelLC
+    formateado.value = valorformateadoDelLC
   }
 });
 
 toggle.addEventListener("change", () => {
+  localStorage.setItem("darkMode", toggle.checked);
   document.body.classList.toggle("dark-mode", toggle.checked);
 });
 
@@ -29,14 +39,17 @@ const outputInput = document.getElementById("output");
 labelInput.addEventListener("keyup", () => {
   const formatted = formatToApiName(labelInput.value);
   outputInput.value = formatted;
+  localStorage.setItem("valorLabel", labelInput.value)
+  localStorage.setItem("valorFormateado", formatted)
 });
 
 labelInput.addEventListener("blur", () => {
   const formatted = formatToApiName(labelInput.value);
   outputInput.value = formatted;
+  localStorage.setItem("valorLabel", labelInput.value)
+  localStorage.setItem("valorFormateado", formatted)
 });
 
-// Función para manejar el copiado y cambio de icono
 function setupCopyButton(buttonId, inputElement) {
   const button = document.getElementById(buttonId);
   const originalIconClass = "bx bxs-copy";
