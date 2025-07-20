@@ -67,7 +67,7 @@
       <div id="record_triggered_flows" class="color-box record_triggered_flows hidden">
        
           <label for="objeto">Objeto:</label>
-          <input type="text" id="objeto" name="objeto" />
+          <input type="text" id="objeto" name="objeto" placeholder="Ej: Account" />
 
           <div class="contenedor_opt_trigg">
             <div class="trgg_rtf">
@@ -90,22 +90,54 @@
           </div>
 
           <label for="accion">Acción:</label>
-          <input type="text" id="accion" name="accion" />
+          <input type="text" id="accion" name="accion" placeholder="Ej: Update status"/>
 
-          <label for="tipoEjecucion">Tipo de Ejecución:</label>
-          <select id="tipoEjecucion" name="tipoEjecucion">
+          <!-- <label for="tipoEjecucion">Tipo de Ejecución:</label>
+          <select id="tipoEjecucion" name="tipoEjecucion" multiple size="3">
             <option value="syn">Síncrono</option>
             <option value="asy">Asíncrono</option>
             <option value="sch">Programado</option>
-          </select>
+          </select> -->
+
+          <fieldset id="tipoEjecucion">
+              <legend>Tipo de Ejecución:</legend>
+
+              <div class="fieldset-labels">
+                <label for="syn-rtf">Síncrono</label>
+                <label for="asyn-rtf">Asíncrono</label>
+                <label for="sch-rtf">Programado</label>
+              </div> 
+              
+              <div class="fieldset-labels">
+                <input type="checkbox" name="tipoEjecucion" id="syn-rtf" value="syn" />
+                <input type="checkbox" name="tipoEjecucion" id="asyn-rtf" value="asy" />
+                <input type="checkbox" name="tipoEjecucion" id="sch-rtf" value="sch" />
+              </div>
+            
+          </fieldset>
+
 
           <div class="separador-horizontal"></div>
 
-          <label for="label">Label:</label>
-          <input type="text" id="label" name="label" readonly />
+          <div class="cont-resultado-rtf">
+            <label for="label">Label:</label>
+            <div>
+              <input type="text" id="label" name="label" readonly />
+              <button id="copyBtnOutputLabelRTF" title="Copiar al portapapeles">
+                <i class="bx bxs-copy"></i>
+              </button>
+            </div>
+          </div>
 
-          <label for="apiName">API Name:</label>
-          <input type="text" id="apiName" name="apiName" readonly />
+          <div class="cont-resultado-rtf">
+            <label for="apiName">API Name:</label>
+            <div>
+              <input type="text" id="apiName" name="apiName" readonly />
+              <button id="copyBtnOutputApiRTF" title="Copiar al portapapeles">
+                  <i class="bx bxs-copy"></i>
+              </button>
+            </div>
+          </div>
       </div>
 
       <div id="screen_flows" class="color-box screen_flows hidden">

@@ -118,3 +118,43 @@
   outline: none;
   box-shadow: 0 0 0 2px #E2E7EA; 
 }
+
+#tipoEjecucion{
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+
+  & legend{
+    padding: 10px;
+  }
+
+  .fieldset-labels{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  label{
+    margin: 0;
+  }
+}
+
+.cont-resultado-rtf{
+
+    & > div{
+        display: flex;
+    }
+
+    #copyBtnOutputLabelRTF,
+    #copyBtnOutputApiRTF{
+        max-height: 35px;
+        margin-top: 4px;
+    }
+
+    input{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+        
+}
