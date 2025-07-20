@@ -112,3 +112,39 @@ function setupCopyButton(buttonId, inputId) {
   });
 
 // --------------------------- -----------------------------------------
+
+
+
+
+//------------------- Screenflows --------------------------------------
+function generarLabelYApiNameSCF() {
+  const labelElement = document.getElementById("label_scf");
+  const apinameElement = document.getElementById("apiName_scf");
+
+  const objeto = document.getElementById("objeto_scf").value.trim();
+  const accion = document.getElementById("accion_scf").value.trim();
+
+  if (!objeto || !accion) {
+    labelElement.value = "Debe completar todos los campos.";
+    apinameElement.value = "Debe completar todos los campos.";
+    return;
+  }
+
+  const label = `${objeto} [SCF] - ${accion}`;
+  const apiName = formatToApiName(label);
+
+  if (label.length > 80) {
+    labelElement.value = "Label too long... Max length 80.";
+    apinameElement.value = "Label too long... Max length 80.";
+  } else {
+    labelElement.value = label;
+    apinameElement.value = apiName;
+  }
+}
+
+document.getElementById("objeto_scf").addEventListener("input", generarLabelYApiNameSCF);
+document.getElementById("accion_scf").addEventListener("input", generarLabelYApiNameSCF);
+setupCopyButton("copyBtnOutputLabelSCF", "label_scf");
+setupCopyButton("copyBtnOutputApiSCF", "apiName_scf");
+
+//--------------------------------------------------------------------

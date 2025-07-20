@@ -141,7 +141,33 @@
       </div>
 
       <div id="screen_flows" class="color-box screen_flows hidden">
-        Caja Azul
+          <label for="objeto_scf">Objeto:</label>
+          <input type="text" id="objeto_scf" name="objeto_scf" placeholder="Ej: File" />
+
+          <label for="accion_scf">Acción:</label>
+          <input type="text" id="accion_scf" name="accion_scf" placeholder="Ej: Show Id" />
+
+          <div class="separador-horizontal"></div>
+
+          <div class="cont-resultado-rtf">
+            <label for="label_scf">Label:</label>
+            <div>
+              <input type="text" id="label_scf" name="label_scf" readonly />
+              <button id="copyBtnOutputLabelSCF" title="Copiar al portapapeles">
+                <i class="bx bxs-copy"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="cont-resultado-rtf">
+            <label for="apiName_scf">API Name:</label>
+            <div>
+              <input type="text" id="apiName_scf" name="apiName_scf" readonly />
+              <button id="copyBtnOutputApiSCF" title="Copiar al portapapeles">
+                <i class="bx bxs-copy"></i>
+              </button>
+            </div>
+          </div>
       </div>
 
       <div id="autolaunched_flows" class="color-box autolaunched_flows hidden">

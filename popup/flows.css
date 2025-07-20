@@ -7,7 +7,7 @@
 }
 
 .record_triggered_flows { background-color: transparent; }
-.screen_flows { background-color: blue; }
+.screen_flows { background-color: transparent; }
 .autolaunched_flows { background-color: goldenrod; }
 .schedule_triggered_flows { background-color: green; }
 
@@ -159,4 +159,10 @@
         border-bottom-right-radius: 0;
     }
         
+}
+
+#copyBtnOutputLabelSCF,
+#copyBtnOutputApiSCF{
+    max-height: 35px;
+    margin-top: 10px;
 }
