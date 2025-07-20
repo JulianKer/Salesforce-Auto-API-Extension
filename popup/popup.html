@@ -2,14 +2,45 @@
 <html>
 <head>
   <title>Probar API Name</title>
-   <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="popup.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
-<body>
-  <h3>Test API Name</h3>
-  <input type="text" id="labelInput" placeholder="Ej: Campaña | N°2" />
-  <button id="formatBtn">Formatear</button>
-  <div>Resultado:</div>
-  <div id="output"></div>
+<body class="dark-mode">
+  <div class="header">
+    <h3>Salesforce Auto-API</h3>
+    <div class="toggle-container">
+      <label class="togglelabel">
+        <input type="checkbox" id="darkToggle" checked />
+        <span class="toggle-slider"></span> Modo Oscuro
+      </label>
+    </div>
+  </div>
+
+  <div class="container1y2">
+    <div class="container1">
+      <label for="labelInput" class="labelinput">Nombre del campo</label>
+      <div class="copy-wrapper">
+        <input type="text" id="labelInput" placeholder="Ej: Teléfono N°2" />
+        <button id="copyBtnLabel" title="Copiar al portapapeles">
+          <i class="bx bxs-copy"></i>
+        </button>
+      </div>
+    </div>
+    
+    <i class="bi bi-arrow-right icon-swap"></i>
+
+    <div class="container2">
+      <label for="output" class="resultado">API Name</label>
+      <div class="copy-wrapper">
+        <input type="text" id="output" placeholder="Ej: telefono_n_2" readonly />
+        <button id="copyBtnOutput" title="Copiar al portapapeles">
+          <i class="bx bxs-copy"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <script src="popup.js"></script>
 </body>
 </html>
