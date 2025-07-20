@@ -5,6 +5,7 @@ body {
   font-family: Arial, sans-serif;
   padding: 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  min-width: 500px;
 }
 
 .header{
