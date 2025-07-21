@@ -6,9 +6,12 @@
   <title>Probar API Name</title>
   <link rel="stylesheet" href="popup.css">
   <link rel="stylesheet" href="flows.css">
+
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
+
+
 <body class="dark-mode">
   <div class="header">
     <h3>Salesforce Auto-API</h3>
@@ -21,15 +24,17 @@
   </div>
 
   <div class="tabs">
-    <button class="tab-button active" data-tab="campos">Campos</button>
+    <button class="tab-button active" data-tab="campos">Campos / Objetos</button>
     <div class="separador"></div>
     <button class="tab-button" data-tab="flows">Flows</button>
   </div>
 
+
+  <!------------------------------ CAMPOS / OBJETOS ----------------------------------------------------->
   <div class="tab-content active" id="campos">
     <div class="container1y2">
       <div class="container1">
-        <label for="labelInput" class="labelinput">Nombre del campo</label>
+        <label for="labelInput" class="labelinput">Nombre</label>
         <div class="copy-wrapper">
           <input type="text" id="labelInput" placeholder="Ej: Teléfono N°2" />
           <button id="copyBtnLabel" title="Copiar al portapapeles">
@@ -52,7 +57,12 @@
     </div>
   </div>
 
-  <div class="tab-content" id="flows">
+  <!------------------------------------------------------------------------------------------------------------------>
+  
+  
+  
+  <!------------------------------------------  FLOWS--------------------------------------------------------------->
+    <div class="tab-content" id="flows">
       <div class="flows-section">
         <label for="colorSelect">Tipo de Flow:</label>
         <select id="colorSelect">
@@ -95,7 +105,6 @@
 
           <fieldset id="tipoEjecucion">
               <legend>Tipo de Ejecución:</legend>
-
               <div class="fieldset-labels">
                 <label for="syn-rtf">Síncrono</label>
                 <label for="asyn-rtf">Asíncrono</label>
@@ -107,9 +116,7 @@
                 <input type="checkbox" name="tipoEjecucion" id="asyn-rtf" value="asy" />
                 <input type="checkbox" name="tipoEjecucion" id="sch-rtf" value="sch" />
               </div>
-            
           </fieldset>
-
 
           <div class="separador-horizontal"></div>
 
@@ -217,9 +224,58 @@
 
 
       <!-- --------------------------SCHEDULE TRIGGERED FLOWS---------------------------------------------------->
-      <div id="schedule_triggered_flows" class="color-box schedule_triggered_flows hidden">
-        Caja Verde
-      </div>
+        <div id="schedule_triggered_flows" class="color-box schedule_triggered_flows hidden">
+          <div class="cont-campo">
+            <label for="inputAccionSTF">Objeto / Proceso:</label>
+            <input type="text" id="inputAccionSTF" />
+          </div>
+
+          <div class="contenedor_opt_trigg cont-frecuencia_y_horario">
+            <div class="cont-campo trgg_rtf">
+              <label for="selectFrecuenciaSTF">Frecuencia:</label>
+              <select id="selectFrecuenciaSTF">
+                <option value="O">Once</option>
+                <option value="D">Daily</option>
+                <option value="W">Weekly</option>
+              </select>
+            </div>
+  
+            <div class="cont-campo opt_rtf">
+              <label for="selectHorarioSTF">Horario:</label>
+              <select id="selectHorarioSTF">
+                <!--pongo los valores con js pq son bastantes xd-->
+              </select>
+            </div>
+          </div>
+
+          <div class="cont-campo">
+            <label for="inputDescripcionSTF">Descripción:</label>
+            <input type="text" id="inputDescripcionSTF" />
+          </div>
+
+          <div class="separador-horizontal"></div>
+
+          <div class="cont-resultado-rtf">
+            <label for="labelSTF">Label:</label>
+            <div>
+              <input type="text" id="labelSTF" name="labelSTF" readonly />
+              <button id="copyBtnOutputLabelSTF" title="Copiar al portapapeles">
+                <i class="bx bxs-copy"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="cont-resultado-rtf">
+            <label for="apiNameSTF">API Name:</label>
+            <div>
+              <input type="text" id="apiNameSTF" name="apiNameSTF" readonly />
+              <button id="copyBtnOutputApiSTF" title="Copiar al portapapeles">
+                <i class="bx bxs-copy"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
       <!-- --------------------------------------- ------------------------------------------------------------->
   </div>
 

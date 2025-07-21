@@ -80,7 +80,7 @@ function setupCopyButton(buttonId, inputId) {
     };
 
     const triggerMap = {
-      "created": "CRE",
+      "created": "CRT",
       "updated": "UPD",
       "created_or_updated": "COU",
       "deleted": "DEL"
@@ -90,7 +90,7 @@ function setupCopyButton(buttonId, inputId) {
     const triggerCode = triggerMap[trigger] || "TRG";
     const tipoTexto = `[${tiposSeleccionados.join(", ")}]`;
 
-    const label = `${objeto} [RTF] | (${optimCode})-(${triggerCode}) | - ${accion} | ${tipoTexto}`;
+    const label = `${objeto} [RTF] | (${triggerCode})-(${optimCode}) | - ${accion} | ${tipoTexto}`;
     apiName = formatToApiName(label)
 
     if (label.length > 80) {
@@ -191,5 +191,57 @@ document.querySelectorAll('#invocadores_alf input[type="checkbox"]').forEach(cb 
 // Botones de copiar
 setupCopyButton("copyBtnOutputLabelALF", "label_alf");
 setupCopyButton("copyBtnOutputApiALF", "apiName_alf");
+
+//--------------------------------------------------------------------
+
+
+
+//--------------------SCHEDULE TRIGGERED FLOWS ---------------------------------------
+// Generar opciones de horario (cada 30 minutos)
+function generarOpcionesHorario(selectElementId) {
+  const select = document.getElementById(selectElementId);
+  for (let h = 0; h < 24; h++) {
+    for (let m = 0; m < 60; m += 30) {
+      const hora = String(h).padStart(2, '0');
+      const minuto = String(m).padStart(2, '0');
+      const option = document.createElement("option");
+      option.value = `${hora}_${minuto}`;
+      option.textContent = `(${hora}:${minuto})`;
+      select.appendChild(option);
+    }
+  }
+}
+generarOpcionesHorario("selectHorarioSTF");
+
+function actualizarSTF() {
+  const accion = document.getElementById("inputAccionSTF").value.trim();
+  const frecuencia = document.getElementById("selectFrecuenciaSTF").value;
+  const horario = document.getElementById("selectHorarioSTF").value;
+  const descripcion = document.getElementById("inputDescripcionSTF").value.trim();
+
+  if (!accion || !frecuencia || !horario || !descripcion) {
+    document.getElementById("labelSTF").value = "Debe completar todos los campos.";
+    document.getElementById("apiNameSTF").value = "Debe completar todos los campos.";
+    return;
+  }
+
+  const label = `${accion} [STF] | (${frecuencia})-(${horario.replace('_', ':')}) | - ${descripcion}`;
+  const apiName = formatToApiName(`${accion}_stf_${frecuencia}_${horario}_${descripcion}`);
+
+  if (apiName.length > 80) {
+      document.getElementById("labelSTF").value = "Label too long... Max length 80.";
+      document.getElementById("apiNameSTF").value = "Label too long... Max length 80.";
+      return;
+  }
+  document.getElementById("labelSTF").value = label;
+  document.getElementById("apiNameSTF").value = apiName;
+}
+
+["inputAccionSTF", "selectFrecuenciaSTF", "selectHorarioSTF", "inputDescripcionSTF"]
+  .forEach(id => document.getElementById(id).addEventListener("input", actualizarSTF));
+
+// Copiar botones
+setupCopyButton("copyBtnOutputLabelSTF", document.getElementById("labelSTF"));
+setupCopyButton("copyBtnOutputApiSTF", document.getElementById("apiNameSTF"));
 
 //--------------------------------------------------------------------

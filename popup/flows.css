@@ -9,13 +9,12 @@
 .record_triggered_flows { background-color: transparent; }
 .screen_flows { background-color: transparent; }
 .autolaunched_flows { background-color: transparent; }
-.schedule_triggered_flows { background-color: green; }
+.schedule_triggered_flows { background-color: transparent; }
 
 .hidden { display: none; }
 
 
-#colorSelect{
-  appearance: none;            
+#colorSelect{          
   background-color: white;    
   color: #333;               
   font-family: 'Segoe UI', sans-serif; 
@@ -23,16 +22,15 @@
   padding: 8px 8px;
   border: none;                
   border-radius: 8px;          
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   cursor: pointer;
   transition: box-shadow 0.3s ease;
   width: 100%;                
-  max-width: 200px;           
+  max-width: 200px;  
+  box-shadow: 0px 0px 3px #444;   
 }
 
 #colorSelect:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #E2E7EA; 
 }
 
 
@@ -162,7 +160,9 @@
 #copyBtnOutputLabelSCF,
 #copyBtnOutputApiSCF,
 #copyBtnOutputApiALF,
-#copyBtnOutputLabelALF{
+#copyBtnOutputLabelALF,
+#copyBtnOutputApiSTF,
+#copyBtnOutputLabelSTF{
     max-height: 35px;
     margin-top: 10px;
 }
@@ -182,4 +182,30 @@
 
 #invocadores_alf label {
   margin: 0;
+}
+
+.cont-frecuencia_y_horario{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.cont-frecuencia_y_horario .cont-campo{
+    font-size: 15px;
+    margin-bottom: 20px;
+
+    & select{           
+         background-color: white;    
+         color: #333;               
+         font-family: 'Segoe UI', sans-serif; 
+         font-size: 14px;            
+         padding: 8px 8px;
+         border: none;                
+         border-radius: 8px;          
+         cursor: pointer;
+         transition: box-shadow 0.3s ease;
+         border: 1px solid #ccc ;
+         min-width: 100% ;
+    }
+    label{
+        margin-bottom: 10px;
+    }
 }

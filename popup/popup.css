@@ -21,6 +21,13 @@ body {
   font-size: 14px !important;
 }
 
+body select:focus,
+body.dark-mode select,
+body.dark-mode select:focus{
+  border: 0 !important;
+  outline: 0 !important;
+}
+
 .header{
   display: flex;
   justify-content: space-between;
@@ -282,9 +289,15 @@ body.dark-mode .tab-button.active {
 body.dark-mode #colorSelect,
 body.dark-mode select {
   background-color: #444;
-  border: 2px solid #6b6b6b;
   color: #fff;
 }
+
+
+body.dark-mode .contenedor_opt_trigg .cont-campo select{
+  background-color: #444444;
+  color: #fff;
+}
+
 
 body label{
   color: #000;
