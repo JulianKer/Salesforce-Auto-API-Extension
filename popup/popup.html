@@ -64,8 +64,9 @@
         </select>
       </div>
       
+
+      <!-- ---------------- RECORD TRIGGERED FLOWS ------------------------------------------------------------->
       <div id="record_triggered_flows" class="color-box record_triggered_flows hidden">
-       
           <label for="objeto">Objeto:</label>
           <input type="text" id="objeto" name="objeto" placeholder="Ej: Account" />
 
@@ -91,13 +92,6 @@
 
           <label for="accion">Acción:</label>
           <input type="text" id="accion" name="accion" placeholder="Ej: Update status"/>
-
-          <!-- <label for="tipoEjecucion">Tipo de Ejecución:</label>
-          <select id="tipoEjecucion" name="tipoEjecucion" multiple size="3">
-            <option value="syn">Síncrono</option>
-            <option value="asy">Asíncrono</option>
-            <option value="sch">Programado</option>
-          </select> -->
 
           <fieldset id="tipoEjecucion">
               <legend>Tipo de Ejecución:</legend>
@@ -140,6 +134,11 @@
           </div>
       </div>
 
+      <!-- --------------------------------------- ------------------------------------------------------------->
+
+
+
+      <!-- ---------------------------- SCREENFLOWS ------------------------------------------------------------->
       <div id="screen_flows" class="color-box screen_flows hidden">
           <label for="objeto_scf">Objeto:</label>
           <input type="text" id="objeto_scf" name="objeto_scf" placeholder="Ej: File" />
@@ -169,14 +168,59 @@
             </div>
           </div>
       </div>
+      <!-- --------------------------------------- ------------------------------------------------------------->
 
+
+
+
+      <!-- ----------------------------------- AUTOLAUNCHED  ------------------------------------------------------------->
       <div id="autolaunched_flows" class="color-box autolaunched_flows hidden">
-        Caja Amarilla
-      </div>
+          <label for="accion_alf">Acción:</label>
+          <input type="text" id="accion_alf" placeholder="Ej: Send Email"/>
 
+          <label for="descripcion_alf">Descripción Inputs y Outputs:</label>
+          <input type="text" id="descripcion_alf" placeholder="Ej: Email address and CaseId"/>
+
+          <fieldset id="invocadores_alf">
+            <legend>Invocadores:</legend>
+            <div class="fieldset-labels">
+              <label><input type="checkbox" value="F" /> Flow</label>
+              <label><input type="checkbox" value="A" /> Apex</label>
+              <label><input type="checkbox" value="R" /> REST API</label>
+            </div>
+          </fieldset>
+
+          <div class="separador-horizontal"></div>
+
+          <div class="cont-resultado-rtf">
+            <label for="label_alf">Label:</label>
+            <div>
+              <input type="text" id="label_alf" readonly />
+              <button id="copyBtnOutputLabelALF" title="Copiar al portapapeles">
+                <i class="bx bxs-copy"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="cont-resultado-rtf">
+            <label for="apiName_alf">API Name:</label>
+            <div>
+              <input type="text" id="apiName_alf" readonly />
+              <button id="copyBtnOutputApiALF" title="Copiar al portapapeles">
+                <i class="bx bxs-copy"></i>
+              </button>
+            </div>
+          </div>
+      </div>
+      <!-- --------------------------------------- ------------------------------------------------------------->
+
+
+
+      <!-- --------------------------SCHEDULE TRIGGERED FLOWS---------------------------------------------------->
       <div id="schedule_triggered_flows" class="color-box schedule_triggered_flows hidden">
         Caja Verde
       </div>
+      <!-- --------------------------------------- ------------------------------------------------------------->
   </div>
 
   <script src="popup.js"></script>

@@ -8,33 +8,31 @@
 
 .record_triggered_flows { background-color: transparent; }
 .screen_flows { background-color: transparent; }
-.autolaunched_flows { background-color: goldenrod; }
+.autolaunched_flows { background-color: transparent; }
 .schedule_triggered_flows { background-color: green; }
 
 .hidden { display: none; }
 
 
-
-
 #colorSelect{
-  appearance: none;            /* Elimina el estilo por defecto */
-  background-color: white;     /* Fondo blanco */
-  color: #333;                 /* Color de texto */
-  font-family: 'Segoe UI', sans-serif; /* Fuente más moderna */
-  font-size: 14px;             /* Tamaño de fuente */
+  appearance: none;            
+  background-color: white;    
+  color: #333;               
+  font-family: 'Segoe UI', sans-serif; 
+  font-size: 14px;            
   padding: 8px 8px;
-  border: none;                /* Sin borde */
-  border-radius: 8px;          /* Bordes redondeados */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  border: none;                
+  border-radius: 8px;          
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   cursor: pointer;
   transition: box-shadow 0.3s ease;
-  width: 100%;                 /* Que se adapte al contenedor */
-  max-width: 200px;            /* Opcional: limitar el ancho */
+  width: 100%;                
+  max-width: 200px;           
 }
 
 #colorSelect:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #E2E7EA; /* Brillo azul al hacer foco */
+  box-shadow: 0 0 0 2px #E2E7EA; 
 }
 
 
@@ -162,7 +160,26 @@
 }
 
 #copyBtnOutputLabelSCF,
-#copyBtnOutputApiSCF{
+#copyBtnOutputApiSCF,
+#copyBtnOutputApiALF,
+#copyBtnOutputLabelALF{
     max-height: 35px;
     margin-top: 10px;
+}
+
+#invocadores_alf {
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#invocadores_alf .fieldset-labels {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#invocadores_alf label {
+  margin: 0;
 }
