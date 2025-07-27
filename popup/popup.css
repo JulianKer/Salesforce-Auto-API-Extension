@@ -18,7 +18,9 @@ body {
   padding: 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
   min-width: 500px;
+  max-width: 600px;
   font-size: 14px !important;
+  margin: auto;
 }
 
 body select:focus,
@@ -43,7 +45,15 @@ h3 {
   margin-bottom: 0;
 }
 
-input[type="text"] {
+.gh svg{
+  transition: all .5s;
+}
+
+
+.gh svg:hover{
+  transform: rotate(360deg) scale(1.3);
+}
+input[type="text"], input[type="search"]  {
   width: 100%;
   padding: 8px;
   margin-bottom: 15px;
@@ -55,7 +65,7 @@ input[type="text"] {
   transition: border-color 0.3s ease;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="search"]:focus {
   border-color: #0B9BE8;
   outline: none;
 }
@@ -130,13 +140,15 @@ body.dark-mode {
   color: white;
 }
 
-body.dark-mode input[type="text"] {
+body.dark-mode input[type="text"],
+body.dark-mode input[type="search"] {
   background-color: #444;
   border: 1px solid #444;
   color: white;
 }
 
-body.dark-mode input[type="text"]:focus {
+body.dark-mode input[type="text"]:focus,
+body.dark-mode input[type="search"]:focus {
   border-color: #0B9BE8;
   outline: none;
 }
@@ -181,9 +193,14 @@ legend{
 
 .container1y2{
   display: flex;
+  flex-direction: column;
   min-width: 100%;
   justify-content: space-between;
   align-items: center;
+
+  & > div {
+    min-width: 100%;
+  }
 }
 
 .icon-swap{

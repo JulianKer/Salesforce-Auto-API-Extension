@@ -32,7 +32,7 @@ const intervalo = setInterval(() => {
   let rellenarBool = true;
   let rellenarElement = null;
 
-  const frames = [window, ...Array.from(window.frames)]; //recorro los iframe x si encontré muchos pq por lo que vi, SF carga vastantes iframes xd
+  const frames = [window, ...Array.from(window.frames)]; //recorro los iframe x si encontré muchos pq por lo que vi, SF carga bastantes iframes xd
 
   for (const frame of frames) {
     try {
@@ -71,10 +71,10 @@ const intervalo = setInterval(() => {
                  .trim()
                  .toLowerCase()
                  .replace(/\s+/g, "_")
-                 .replace(/_+/g, "_");
+                 .replace(/_+/g, "_")
+                 .replace(/^_+|_+$/g, "");
 
                safeApiNameInput.value = valorFormateado;
-               safeApiNameInput.dispatchEvent(new Event("input", { bubbles: true }));
   
                console.log("[Extensión SF] API Name formateado:", valorFormateado);  
              }else{
