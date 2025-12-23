@@ -175,9 +175,9 @@
 }
 
 #invocadores_alf .fieldset-labels {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
 }
 
 #invocadores_alf label {

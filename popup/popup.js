@@ -1,3 +1,5 @@
+import { formatToApiName, guardarLS} from "../utils/utils.js";
+
 const toggle = document.getElementById("darkToggle");
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -22,33 +24,28 @@ toggle.addEventListener("change", () => {
   document.body.classList.toggle("dark-mode", toggle.checked);
 });
 
-function formatToApiName(label) {
-  return label
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^\w\s]/gi, "_")
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, "_")
-    .replace(/_+/g, "_");
-}
 
 const labelInput = document.getElementById("labelInput");
 const outputInput = document.getElementById("output");
+const trash = document.getElementById("trash");
 
 labelInput.addEventListener("keyup", () => {
   const formatted = formatToApiName(labelInput.value);
   outputInput.value = formatted;
-  localStorage.setItem("valorLabel", labelInput.value)
-  localStorage.setItem("valorFormateado", formatted)
+  guardarLS(labelInput.value, formatted)
 });
 
 labelInput.addEventListener("blur", () => {
   const formatted = formatToApiName(labelInput.value);
   outputInput.value = formatted;
-  localStorage.setItem("valorLabel", labelInput.value)
-  localStorage.setItem("valorFormateado", formatted)
+  guardarLS(labelInput.value, formatted)
 });
+
+trash.addEventListener("click", ()=>{
+  labelInput.value = "";
+  outputInput.value = "";
+  guardarLS("", "");
+})
 
 function setupCopyButton(buttonId, inputElement) {
   const button = document.getElementById(buttonId);
@@ -71,12 +68,6 @@ function setupCopyButton(buttonId, inputElement) {
 
 setupCopyButton("copyBtnLabel", labelInput);
 setupCopyButton("copyBtnOutput", outputInput);
-
-
-
-
-
-
 
 
 
