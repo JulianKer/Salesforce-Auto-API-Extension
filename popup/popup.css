@@ -34,6 +34,9 @@ body.dark-mode select:focus{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  justify-items: center;
   margin-bottom: 30px;
   padding-bottom: 10px;
   border-bottom: #0883d1 solid 2px;
@@ -43,6 +46,15 @@ h3 {
   margin-top: 0;
   text-align: center;
   margin-bottom: 0;
+}
+
+.container_logo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  & >img{
+    width: 40px;
+  }
 }
 
 .gh svg{
@@ -218,6 +230,7 @@ legend{
     & >i{
       font-size: 20px;
       transition: all .2s;
+      color: white;
     }
 
     >i:hover{
@@ -312,6 +325,12 @@ button[id^="copyBtn"] i, button[id^="copyBtnOutput"] i {
   font-weight: bold;
   transition: all 0.3s ease;
   background-color: transparent;
+  transition: all .3s;
+}
+
+.tab-button:hover{
+  border-bottom: 2px solid #0B9BE8;
+  transform: translateY(-2px);
 }
 
 .tab-button.active {
