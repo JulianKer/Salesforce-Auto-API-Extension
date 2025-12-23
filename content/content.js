@@ -1,4 +1,15 @@
-import { formatToApiName } from "../utils/utils.js";
+function formatToApiName(label) {
+  return label
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^\w\s]/gi, "_")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "_")
+    .replace(/_+/g, "_")
+    .replace(/^_+|_+$/g, "");
+}
+
 
 console.log("[Extensión SF] Script cargado.");
 
