@@ -27,6 +27,7 @@ toggle.addEventListener("change", () => {
 
 const labelInput = document.getElementById("labelInput");
 const outputInput = document.getElementById("output");
+const trash = document.getElementById("trash");
 
 labelInput.addEventListener("keyup", () => {
   const formatted = formatToApiName(labelInput.value);
@@ -41,6 +42,11 @@ labelInput.addEventListener("blur", () => {
   localStorage.setItem("valorLabel", labelInput.value)
   localStorage.setItem("valorFormateado", formatted)
 });
+
+trash.addEventListener("click", ()=>{
+  labelInput.value = "";
+  outputInput.value = "";
+})
 
 function setupCopyButton(buttonId, inputElement) {
   const button = document.getElementById(buttonId);

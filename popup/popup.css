@@ -203,6 +203,32 @@ legend{
   }
 }
 
+.containerLabelAndTrash{
+  display: flex;
+  justify-content: space-between;
+
+  & .containerTrash{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    padding: 3px;
+    border-radius: 20%;
+
+    & >i{
+      font-size: 20px;
+      transition: all .2s;
+    }
+
+    >i:hover{
+      cursor: pointer;
+      transform: scale(1.1) rotate(10deg);
+
+    }
+  }
+}
+
+
 .icon-swap{
   font-size: 20px; 
   color: #000;
