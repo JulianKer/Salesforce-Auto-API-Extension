@@ -35,3 +35,8 @@ function generarOpcionesHorario(selectElementId) {
   }
 }
 generarOpcionesHorario("selectHorarioSTF");
+
+export function guardarLS(label, api) {
+  localStorage.setItem("valorLabel", label)
+  localStorage.setItem("valorFormateado", api)
+}

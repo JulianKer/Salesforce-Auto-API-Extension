@@ -1,4 +1,4 @@
-import { formatToApiName } from "../utils/utils.js";
+import { formatToApiName, guardarLS} from "../utils/utils.js";
 
 const toggle = document.getElementById("darkToggle");
 
@@ -32,20 +32,19 @@ const trash = document.getElementById("trash");
 labelInput.addEventListener("keyup", () => {
   const formatted = formatToApiName(labelInput.value);
   outputInput.value = formatted;
-  localStorage.setItem("valorLabel", labelInput.value)
-  localStorage.setItem("valorFormateado", formatted)
+  guardarLS(labelInput.value, formatted)
 });
 
 labelInput.addEventListener("blur", () => {
   const formatted = formatToApiName(labelInput.value);
   outputInput.value = formatted;
-  localStorage.setItem("valorLabel", labelInput.value)
-  localStorage.setItem("valorFormateado", formatted)
+  guardarLS(labelInput.value, formatted)
 });
 
 trash.addEventListener("click", ()=>{
   labelInput.value = "";
   outputInput.value = "";
+  guardarLS("", "");
 })
 
 function setupCopyButton(buttonId, inputElement) {
@@ -69,12 +68,6 @@ function setupCopyButton(buttonId, inputElement) {
 
 setupCopyButton("copyBtnLabel", labelInput);
 setupCopyButton("copyBtnOutput", outputInput);
-
-
-
-
-
-
 
 
 

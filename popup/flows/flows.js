@@ -1,4 +1,4 @@
-import { formatToApiName, setLabelAndApiFirstTab } from "../../utils/utils.js";
+import { formatToApiName, setLabelAndApiFirstTab, guardarLS } from "../../utils/utils.js";
 
 const colorSelect = document.getElementById("colorSelect");
 const boxes = ["record_triggered_flows", "screen_flows", "autolaunched_flows", "schedule_triggered_flows"];
@@ -86,6 +86,7 @@ function setupCopyButton(buttonId, inputId) {
         labelElement.value = label;
         apinameElement.value = apiName;
         setLabelAndApiFirstTab(labelElement.value, apinameElement.value)
+        guardarLS(label, apiName);
     }
   }
 
@@ -127,6 +128,7 @@ function generarLabelYApiNameSCF() {
     labelElement.value = label;
     apinameElement.value = apiName;
     setLabelAndApiFirstTab(labelElement.value, apinameElement.value)
+    guardarLS(label, apiName);
   }
 }
 
@@ -167,6 +169,7 @@ function generarLabelYApiNameALF() {
     labelElement.value = label;
     apiElement.value = apiName;
     setLabelAndApiFirstTab(labelElement.value, apiElement.value)
+    guardarLS(label, apiName);
   }
 }
 
@@ -210,6 +213,7 @@ function actualizarSTF() {
     labelElement.value = label;
     apiElement.value = apiName;
     setLabelAndApiFirstTab(labelElement.value, apiElement.value)
+    guardarLS(label, apiName);
   }
 }
 
