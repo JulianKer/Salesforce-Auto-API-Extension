@@ -93,7 +93,7 @@ La extensión se ejecuta exclusivamente en los siguientes dominios:
 
 ______________________________________________
   
-> [!IMPORTANT]
+> [!NOTE]
 > ## ❔ Propósito del Proyecto
 > - Estandarizar el nombrado de flows dentro de salesforce y evitar los API Names mal formados.
 > - Facilitar la búsqueda de los diferentes componentes dentro de los Conjuntos de Cambios (Change Sets), Integraciones y otros procesos que requieran la visualización de los API Names.
