@@ -1,5 +1,5 @@
 
-<img src="https://github.com/JulianKer/Salesforce-Auto-API-Extension/blob/main/icon_logo.png" alt="CRYPTO" width="50" />
+<img src="https://github.com/JulianKer/Salesforce-Auto-API-Extension/blob/main/icon_logo.png" alt="Salesforce Auto-API Logo" title="Salesforce Auto-API Logo" width="50"/>
 
 # Salesforce Auto-API 
 
