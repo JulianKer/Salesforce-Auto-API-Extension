@@ -29,7 +29,7 @@ La extensión ofrece **dos formas de uso**:
    - El último valor ingresado se guarda localmente para facilitar su reutilización.
    - Construye intuitivamente el label y API Name de los diferentes tipos de flujos más utilizados de Salesforce.
      
-## 🧩 Ejemplo de conversión
+## 🔄 Ejemplo de conversión
 
 - Campos/Objetos u otras configuraciones:
 
@@ -48,7 +48,7 @@ La extensión ofrece **dos formas de uso**:
 | Autolaunched Flow     | `Send Email [ALF] - (Notify Case Owner) \| [F]` | `send_email_alf_notify_case_owner_f` |
 | Schedule-Triggered Flow     | `Opportunity [STF] \| (W)-(22:30) \| - Send CSV File` | `opportunity_stf_w_22_30_send_csv_file` |
 
-## 🧩 Instalación desde Chrome Web Store
+## 💡 Instalación desde Chrome Web Store
 
 La extensión puede instalarse directamente desde la **Chrome Web Store** en pocos pasos.
 
