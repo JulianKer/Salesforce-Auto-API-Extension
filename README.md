@@ -48,6 +48,29 @@ La extensión ofrece **dos formas de uso**:
 | Autolaunched Flow     | `Send Email [ALF] - (Notify Case Owner) \| [F]` | `send_email_alf_notify_case_owner_f` |
 | Schedule-Triggered Flow     | `Opportunity [STF] \| (W)-(22:30) \| - Send CSV File` | `opportunity_stf_w_22_30_send_csv_file` |
 
+## 🧩 Instalación desde Chrome Web Store
+
+La extensión puede instalarse directamente desde la **Chrome Web Store** en pocos pasos.
+
+### Pasos de instalación
+
+1. Accede a la extensión en la **Chrome Web Store** desde este enlace -> <a href="https://chromewebstore.google.com/detail/ipgbaecfammahenbamajlnpglkjjabdp?utm_source=item-share-cb"> Salesforce Auto-Api</a>.
+2. Haz clic en el botón **“Añadir a Chrome”**.
+3. Confirma la instalación cuando el navegador lo solicite.
+
+Una vez instalada, la extensión quedará disponible en la barra de herramientas de Chrome.
+
+### 📌 Fijar la extensión (opcional)
+
+Para un acceso más rápido:
+
+1. Haz clic en el ícono de **Extensiones** (pieza de rompecabezas) en la barra de Chrome.
+2. Busca la extensión en la lista.
+3. Haz clic en el ícono de **pin** para fijarla en la barra.
+
+La extensión quedará lista para usarse tanto desde el popup como automáticamente dentro de Salesforce.
+
+
 ## 🔐 Privacidad y seguridad
 
 - La extensión **no recopila datos personales**.
@@ -62,6 +85,10 @@ La extensión se ejecuta exclusivamente en los siguientes dominios:
 - `*.salesforce.com`
 - `*.salesforce-setup.com`
 - `*.lightning.force.com`
+  
+## ❔ Propósito del proyecto
+- Estandarizar el nombrado de flows dentro de salesforce y evitar los API Names mal formados.
+- Facilitar la búsqueda de los diferentes componentes dentro de los Conjuntos de Cambios (Change Sets), Integraciones y otros procesos que requieran la visualización de los API Names.
 ______________________________________________
 
 ![Readme by:](https://img.shields.io/badge/Readme%20by:-00A1E0?style=for-the-badge&logo=account&logoColor=white)
