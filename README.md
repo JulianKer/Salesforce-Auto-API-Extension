@@ -22,13 +22,18 @@ La extensión ofrece **dos formas de uso**:
 
 1. **Automática dentro de Salesforce**  
    - Detecta cuando el usuario escribe un label en algunos de los formularios estándar de Salesforce y genera automáticamente el API Name correspondiente.
-   - Opci+on de desactivar el Auto-completado para evitar la conversión automática (ideal para realizar cambios de labels sin afectar el API Name actual).
+   - Opción para desactivar el Auto-completado para evitar la conversión automática (ideal para realizar cambios de labels sin afectar el API Name actual).
 
 2. **Mediante el popup de la extensión**  
    - El usuario puede abrir el popup, ingresar un texto y obtener su versión en API Name.  
    - El último valor ingresado se guarda localmente para facilitar su reutilización.
    - Construye intuitivamente el label y API Name de los diferentes tipos de flujos más utilizados de Salesforce.
      
+> [!TIP]
+> También pueden utilizar la extensión directamente desde una web sin necesidad de instalarla en su navegador. Para ello puede consultar la siguiente web: <a href="https://salesforce-extension.vercel.app/"> Salesforce Auto-Api Web</a>.
+
+______________________________________________
+
 ## 🔄 Ejemplo de conversión
 
 - Campos/Objetos u otras configuraciones:
@@ -85,10 +90,13 @@ La extensión se ejecuta exclusivamente en los siguientes dominios:
 - `*.salesforce.com`
 - `*.salesforce-setup.com`
 - `*.lightning.force.com`
+
+______________________________________________
   
-## ❔ Propósito del proyecto
-- Estandarizar el nombrado de flows dentro de salesforce y evitar los API Names mal formados.
-- Facilitar la búsqueda de los diferentes componentes dentro de los Conjuntos de Cambios (Change Sets), Integraciones y otros procesos que requieran la visualización de los API Names.
+> [!IMPORTANT]
+> ## ❔ Propósito del Proyecto
+> - Estandarizar el nombrado de flows dentro de salesforce y evitar los API Names mal formados.
+> - Facilitar la búsqueda de los diferentes componentes dentro de los Conjuntos de Cambios (Change Sets), Integraciones y otros procesos que requieran la visualización de los API Names.
 ______________________________________________
 
 ![Readme by:](https://img.shields.io/badge/Readme%20by:-00A1E0?style=for-the-badge&logo=account&logoColor=white)
