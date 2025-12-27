@@ -27,7 +27,7 @@ La extensión ofrece **dos formas de uso**:
    - Construye intuitivamente el label y API Name de los diferentes tipos de flujos más utilizados de Salesforce.
      
 > [!TIP]
-> También pueden utilizar la extensión directamente desde una web sin necesidad de instalarla en su navegador. Para ello puede consultar la siguiente web: <a href="https://salesforce-extension.vercel.app/" targent="_blank"> Salesforce Auto-Api Web</a>.
+> También pueden utilizar la extensión directamente desde una web sin necesidad de instalarla en su navegador. Para ello puede consultar la siguiente web: <a href="https://salesforce-extension.vercel.app/" target="_blank"> Salesforce Auto-Api Web</a>.
 
 ______________________________________________
 
