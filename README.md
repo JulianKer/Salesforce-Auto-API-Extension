@@ -1,5 +1,5 @@
 
-# Salesforce Auto-API <img src="https://github.com/JulianKer/Salesforce-Auto-API-Extension/blob/main/icon_logo.png" alt="Salesforce Auto-API Logo" title="Salesforce Auto-API Logo" width="50" align="center"/>
+# Salesforce Auto-API     <img src="https://github.com/JulianKer/Salesforce-Auto-API-Extension/blob/main/icon_logo.png" alt="Salesforce Auto-API Logo" title="Salesforce Auto-API Logo" width="60" align="center"/>
 
 Salesforce Auto-API es una extensión para Google Chrome que convierte automáticamente los nombres de campos ingresados en Salesforce en **API Names válidos**, siguiendo el formato `snake_case`, con el objetivo de agilizar la configuración y evitar errores manuales.
 <br>
@@ -41,7 +41,7 @@ ______________________________________________
 | N° de Teléfono / Móvil         | `n_de_telefono_movil`      |
 | Código Producto SF     | `codigo_producto_sf` |
 
--  Flows <img src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/record-triggered-flows/0f2675f8e3c0586be8533c1b39abb7a0_badge.png" alt="Flows Logo" title="Salesforce Auto-API Logo" width="25" align="center"/>
+<img src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/record-triggered-flows/0f2675f8e3c0586be8533c1b39abb7a0_badge.png" alt="Flows Logo" title="Salesforce Auto-API Logo" width="50" align="center"/> <strong> Flows</strong>
 
 | Tipo de Flow         | Label generado        |API Name generado        |
 |------------------------|--------------------------|--------------------------|
@@ -50,7 +50,7 @@ ______________________________________________
 | Autolaunched Flow     | `Send Email [ALF] - (Notify Case Owner) \| [F]` | `send_email_alf_notify_case_owner_f` |
 | Schedule-Triggered Flow     | `Opportunity [STF] \| (W)-(22:30) \| - Send CSV File` | `opportunity_stf_w_22_30_send_csv_file` |
 
-##   Instalación desde Chrome Web Store <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png" alt="Google Chrome" width="24"/>
+##   Instalación desde Chrome Web Store <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png" alt="Google Chrome" width="35" align="center"/>
 
 La extensión puede instalarse directamente desde la **Chrome Web Store** en pocos pasos.
 
