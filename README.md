@@ -33,7 +33,7 @@ ______________________________________________
 
 ## 🔄 Ejemplo de conversión
 
-<img src="https://github.com/JulianKer/Salesforce-Auto-API-Extension/blob/refactor/icons/edit_element.png" width="30" align="center" /> <strong>Campos/Objetos u otras configuraciones: </strong>
+<img src="https://github.com/JulianKer/Salesforce-Auto-API-Extension/blob/refactor/icons/edit_element.png" width="30" align="center" /> <strong>Campos/Objetos y otras configuraciones: </strong>
   
 | Label ingresado        | API Name generado        |
 |------------------------|--------------------------|
