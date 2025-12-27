@@ -27,21 +27,21 @@ La extensión ofrece **dos formas de uso**:
    - Construye intuitivamente el label y API Name de los diferentes tipos de flujos más utilizados de Salesforce.
      
 > [!TIP]
-> También pueden utilizar la extensión directamente desde una web sin necesidad de instalarla en su navegador. Para ello puede consultar la siguiente web: <a href="https://salesforce-extension.vercel.app/"> Salesforce Auto-Api Web</a>.
+> También pueden utilizar la extensión directamente desde una web sin necesidad de instalarla en su navegador. Para ello puede consultar la siguiente web: <a href="https://salesforce-extension.vercel.app/" targent="_blank"> Salesforce Auto-Api Web</a>.
 
 ______________________________________________
 
 ## 🔄 Ejemplo de conversión
 
-- Campos/Objetos u otras configuraciones:
-
+<img src="https://github.com/JulianKer/Salesforce-Auto-API-Extension/blob/refactor/icons/edit_element.png" width="30" align="center" /> <strong>Campos/Objetos u otras configuraciones: </strong>
+  
 | Label ingresado        | API Name generado        |
 |------------------------|--------------------------|
 | Nombre del Cliente     | `nombre_del_cliente` |
 | N° de Teléfono / Móvil         | `n_de_telefono_movil`      |
 | Código Producto SF     | `codigo_producto_sf` |
 
-<img src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/record-triggered-flows/0f2675f8e3c0586be8533c1b39abb7a0_badge.png" alt="Flows Logo" title="Salesforce Auto-API Logo" width="50" align="center"/> <strong> Flows</strong>
+<img src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/record-triggered-flows/0f2675f8e3c0586be8533c1b39abb7a0_badge.png" alt="Flows Logo" title="Salesforce Auto-API Logo" width="30" align="center"/> <strong> Flows</strong>
 
 | Tipo de Flow         | Label generado        |API Name generado        |
 |------------------------|--------------------------|--------------------------|
@@ -56,7 +56,7 @@ La extensión puede instalarse directamente desde la **Chrome Web Store** en poc
 
 ### Pasos de instalación
 
-1. Accede a la extensión en la **Chrome Web Store** desde este enlace -> <a href="https://chromewebstore.google.com/detail/ipgbaecfammahenbamajlnpglkjjabdp?utm_source=item-share-cb"> Salesforce Auto-Api</a>.
+1. Accede a la extensión en la **Chrome Web Store** desde este enlace -> <a href="https://chromewebstore.google.com/detail/ipgbaecfammahenbamajlnpglkjjabdp?utm_source=item-share-cb" target="_blank"> Salesforce Auto-Api</a>.
 2. Haz clic en el botón **“Añadir a Chrome”**.
 3. Confirma la instalación cuando el navegador lo solicite.
 
@@ -84,9 +84,9 @@ La extensión quedará lista para usarse tanto desde el popup como automáticame
 
 La extensión se ejecuta exclusivamente en los siguientes dominios:
 
-- `*.salesforce.com`
-- `*.salesforce-setup.com`
-- `*.lightning.force.com`
+- `*.salesforce.com/*`
+- `*.salesforce-setup.com/*`
+- `*.lightning.force.com/*`
 
 ______________________________________________
   
