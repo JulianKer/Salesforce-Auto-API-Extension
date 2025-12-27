@@ -1,11 +1,9 @@
 
-# Salesforce Auto-API <img src="https://github.com/JulianKer/Salesforce-Auto-API-Extension/blob/main/icon_logo.png" alt="Salesforce Auto-API Logo" title="Salesforce Auto-API Logo" width="40"/>
-
-
+# Salesforce Auto-API <img src="https://github.com/JulianKer/Salesforce-Auto-API-Extension/blob/main/icon_logo.png" alt="Salesforce Auto-API Logo" title="Salesforce Auto-API Logo" width="50" align="center"/>
 
 Salesforce Auto-API es una extensión para Google Chrome que convierte automáticamente los nombres de campos ingresados en Salesforce en **API Names válidos**, siguiendo el formato `snake_case`, con el objetivo de agilizar la configuración y evitar errores manuales.
 <br>
-## 🚀 Características
+## 💡 Características
 
 - Conversión automática de labels a API Names en Salesforce.
 - Funcionamiento directo dentro de la interfaz de Salesforce (Setup).
@@ -15,7 +13,7 @@ Salesforce Auto-API es una extensión para Google Chrome que convierte automáti
 - Procesamiento 100% local (sin envío de datos externos).
 - Modo claro & oscuro.
   
-## 🧠 ¿Cómo funciona?
+## 🛠️ ¿Cómo funciona?
 
 La extensión ofrece **dos formas de uso**:
 
@@ -43,7 +41,7 @@ ______________________________________________
 | N° de Teléfono / Móvil         | `n_de_telefono_movil`      |
 | Código Producto SF     | `codigo_producto_sf` |
 
-- Flows
+-  Flows <img src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/record-triggered-flows/0f2675f8e3c0586be8533c1b39abb7a0_badge.png" alt="Flows Logo" title="Salesforce Auto-API Logo" width="25" align="center"/>
 
 | Tipo de Flow         | Label generado        |API Name generado        |
 |------------------------|--------------------------|--------------------------|
@@ -93,8 +91,8 @@ La extensión se ejecuta exclusivamente en los siguientes dominios:
 ______________________________________________
   
 > [!NOTE]
-> ## ❔ Propósito del Proyecto
-> - Estandarizar el nombrado de flows dentro de salesforce y evitar los API Names mal formados.
+> ## Propósito del Proyecto
+> - Estandarizar el nombrado de flows dentro de Salesforce y evitar los API Names mal formados.
 > - Facilitar la búsqueda de los diferentes componentes dentro de los Conjuntos de Cambios (Change Sets), Integraciones y otros procesos que requieran la visualización de los API Names.
 ______________________________________________
 
