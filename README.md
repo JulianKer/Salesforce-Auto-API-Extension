@@ -1,11 +1,10 @@
 
-<img src="https://github.com/JulianKer/Salesforce-Auto-API-Extension/blob/main/icon_logo.png" alt="Salesforce Auto-API Logo" title="Salesforce Auto-API Logo" width="50"/>
+# Salesforce Auto-API <img src="https://github.com/JulianKer/Salesforce-Auto-API-Extension/blob/main/icon_logo.png" alt="Salesforce Auto-API Logo" title="Salesforce Auto-API Logo" width="40"/>
 
-# Salesforce Auto-API 
 
 
 Salesforce Auto-API es una extensión para Google Chrome que convierte automáticamente los nombres de campos ingresados en Salesforce en **API Names válidos**, siguiendo el formato `snake_case`, con el objetivo de agilizar la configuración y evitar errores manuales.
-
+<br>
 ## 🚀 Características
 
 - Conversión automática de labels a API Names en Salesforce.
@@ -15,7 +14,7 @@ Salesforce Auto-API es una extensión para Google Chrome que convierte automáti
 - No requiere configuración adicional.
 - Procesamiento 100% local (sin envío de datos externos).
 - Modo claro & oscuro.
-
+  
 ## 🧠 ¿Cómo funciona?
 
 La extensión ofrece **dos formas de uso**:
@@ -53,7 +52,7 @@ ______________________________________________
 | Autolaunched Flow     | `Send Email [ALF] - (Notify Case Owner) \| [F]` | `send_email_alf_notify_case_owner_f` |
 | Schedule-Triggered Flow     | `Opportunity [STF] \| (W)-(22:30) \| - Send CSV File` | `opportunity_stf_w_22_30_send_csv_file` |
 
-## 💡 Instalación desde Chrome Web Store
+##   Instalación desde Chrome Web Store <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png" alt="Google Chrome" width="24"/>
 
 La extensión puede instalarse directamente desde la **Chrome Web Store** en pocos pasos.
 
