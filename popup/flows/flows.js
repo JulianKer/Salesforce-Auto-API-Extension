@@ -221,7 +221,7 @@ function actualizarSTF() {
   .forEach(id => document.getElementById(id).addEventListener("input", actualizarSTF));
 
 // Copiar botones
-setupCopyButton("copyBtnOutputLabelSTF", document.getElementById("labelSTF"));
-setupCopyButton("copyBtnOutputApiSTF", document.getElementById("apiNameSTF"));
+setupCopyButton("copyBtnOutputLabelSTF", "labelSTF");
+setupCopyButton("copyBtnOutputApiSTF", "apiNameSTF");
 
 //--------------------------------------------------------------------

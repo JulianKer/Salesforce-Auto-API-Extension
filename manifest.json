@@ -10,13 +10,13 @@
         "https://*.lightning.force.com/*"
     ],
   "action": {
-    "default_popup": "popup/popup.html",
-    "default_icon": "icon_logo.png"
+    "default_popup": "index.html",
+    "default_icon": "/imgs/icon_logo.png"
   },
   "icons": {
-    "16": "icon_logo.png",
-    "48": "icon_logo.png",
-    "128": "icon_logo.png"
+    "16": "/imgs/icon_logo.png",
+    "48": "/imgs/icon_logo.png",
+    "128": "/imgs/icon_logo.png"
   },
   "content_scripts": [
     {
