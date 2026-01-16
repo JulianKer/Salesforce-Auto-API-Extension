@@ -1,22 +1,30 @@
 {
   "manifest_version": 3,
   "name": "Salesforce Auto-API",
-  "version": "1.0",
+  "version": "2.1",
   "description": "Convierte automáticamente nombres de campos de Salesforce en API Names en snake_case.",
-  "permissions": ["scripting", "activeTab"],
-  "host_permissions": ["<all_urls>"],
+  "permissions": [],
+  "host_permissions": [
+        "https://*.salesforce.com/*",
+        "https://*.salesforce-setup.com/*",
+        "https://*.lightning.force.com/*"
+    ],
   "action": {
-    "default_popup": "popup/popup.html",
-    "default_icon": "icon.png"
+    "default_popup": "index.html",
+    "default_icon": "/imgs/icon_logo.png"
   },
   "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
+    "16": "/imgs/icon_logo.png",
+    "48": "/imgs/icon_logo.png",
+    "128": "/imgs/icon_logo.png"
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": [
+        "https://*.salesforce.com/*",
+        "https://*.salesforce-setup.com/*",
+        "https://*.lightning.force.com/*"
+      ],
       "js": ["content/content.js"],
       "all_frames": true,
       "run_at": "document_idle"

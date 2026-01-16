@@ -1,3 +1,5 @@
+import { formatToApiName, setLabelAndApiFirstTab, guardarLS } from "../../utils/utils.js";
+
 const colorSelect = document.getElementById("colorSelect");
 const boxes = ["record_triggered_flows", "screen_flows", "autolaunched_flows", "schedule_triggered_flows"];
 
@@ -12,22 +14,6 @@ colorSelect.addEventListener("change", () => {
   }
 });
 
-
-
-
-
-function formatToApiName(label) {
-  return label
-     .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/\(([^)]+)\)-\(([^)]+)\)/g, "$1_$2")
-    .replace(/[^\w\s]/gi, "_")
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, "_") 
-    .replace(/_+/g, "_")
-    .replace(/^_+|_+$/g, "");
-}
 
 function setupCopyButton(buttonId, inputId) {
     const button = document.getElementById(buttonId);
@@ -91,7 +77,7 @@ function setupCopyButton(buttonId, inputId) {
     const tipoTexto = `[${tiposSeleccionados.join(", ")}]`;
 
     const label = `${objeto} [RTF] | (${triggerCode})-(${optimCode}) | - ${accion} | ${tipoTexto}`;
-    apiName = formatToApiName(label)
+    let apiName = formatToApiName(label)
 
     if (label.length > 80) {
         labelElement.value = "Label too long... Max length 80.  ";
@@ -99,6 +85,8 @@ function setupCopyButton(buttonId, inputId) {
     }else{
         labelElement.value = label;
         apinameElement.value = apiName;
+        setLabelAndApiFirstTab(labelElement.value, apinameElement.value)
+        guardarLS(label, apiName);
     }
   }
 
@@ -139,6 +127,8 @@ function generarLabelYApiNameSCF() {
   } else {
     labelElement.value = label;
     apinameElement.value = apiName;
+    setLabelAndApiFirstTab(labelElement.value, apinameElement.value)
+    guardarLS(label, apiName);
   }
 }
 
@@ -169,7 +159,7 @@ function generarLabelYApiNameALF() {
   }
 
   const sufijos = `[${invocadores.join(", ")}]`;
-  const label = `${accion} [ALF] - ${descripcion} | ${sufijos}`;
+  const label = `${accion} [ALF] - (${descripcion}) | ${sufijos}`;
   const apiName = formatToApiName(label);
 
   if (label.length > 80) {
@@ -178,17 +168,17 @@ function generarLabelYApiNameALF() {
   } else {
     labelElement.value = label;
     apiElement.value = apiName;
+    setLabelAndApiFirstTab(labelElement.value, apiElement.value)
+    guardarLS(label, apiName);
   }
 }
 
-// Eventos
+// eventos
 document.getElementById("accion_alf").addEventListener("input", generarLabelYApiNameALF);
 document.getElementById("descripcion_alf").addEventListener("input", generarLabelYApiNameALF);
-document.querySelectorAll('#invocadores_alf input[type="checkbox"]').forEach(cb =>
-  cb.addEventListener("change", generarLabelYApiNameALF)
-);
+document.querySelectorAll('#invocadores_alf input[type="checkbox"]').forEach(cb => cb.addEventListener("change", generarLabelYApiNameALF));
 
-// Botones de copiar
+// buttons de copy
 setupCopyButton("copyBtnOutputLabelALF", "label_alf");
 setupCopyButton("copyBtnOutputApiALF", "apiName_alf");
 
@@ -197,23 +187,11 @@ setupCopyButton("copyBtnOutputApiALF", "apiName_alf");
 
 
 //--------------------SCHEDULE TRIGGERED FLOWS ---------------------------------------
-// Generar opciones de horario (cada 30 minutos)
-function generarOpcionesHorario(selectElementId) {
-  const select = document.getElementById(selectElementId);
-  for (let h = 0; h < 24; h++) {
-    for (let m = 0; m < 60; m += 30) {
-      const hora = String(h).padStart(2, '0');
-      const minuto = String(m).padStart(2, '0');
-      const option = document.createElement("option");
-      option.value = `${hora}_${minuto}`;
-      option.textContent = `(${hora}:${minuto})`;
-      select.appendChild(option);
-    }
-  }
-}
-generarOpcionesHorario("selectHorarioSTF");
 
 function actualizarSTF() {
+  const labelElement = document.getElementById("labelSTF");
+  const apiElement = document.getElementById("apiNameSTF");
+
   const accion = document.getElementById("inputAccionSTF").value.trim();
   const frecuencia = document.getElementById("selectFrecuenciaSTF").value;
   const horario = document.getElementById("selectHorarioSTF").value;
@@ -229,19 +207,21 @@ function actualizarSTF() {
   const apiName = formatToApiName(`${accion}_stf_${frecuencia}_${horario}_${descripcion}`);
 
   if (apiName.length > 80) {
-      document.getElementById("labelSTF").value = "Label too long... Max length 80.";
-      document.getElementById("apiNameSTF").value = "Label too long... Max length 80.";
-      return;
+      labelElement.value = "Label too long... Max length 80.";
+      apiElement.value = "Label too long... Max length 80.";
+  }else{
+    labelElement.value = label;
+    apiElement.value = apiName;
+    setLabelAndApiFirstTab(labelElement.value, apiElement.value)
+    guardarLS(label, apiName);
   }
-  document.getElementById("labelSTF").value = label;
-  document.getElementById("apiNameSTF").value = apiName;
 }
 
 ["inputAccionSTF", "selectFrecuenciaSTF", "selectHorarioSTF", "inputDescripcionSTF"]
   .forEach(id => document.getElementById(id).addEventListener("input", actualizarSTF));
 
 // Copiar botones
-setupCopyButton("copyBtnOutputLabelSTF", document.getElementById("labelSTF"));
-setupCopyButton("copyBtnOutputApiSTF", document.getElementById("apiNameSTF"));
+setupCopyButton("copyBtnOutputLabelSTF", "labelSTF");
+setupCopyButton("copyBtnOutputApiSTF", "apiNameSTF");
 
 //--------------------------------------------------------------------
