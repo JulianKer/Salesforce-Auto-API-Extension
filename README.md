@@ -1,5 +1,5 @@
 
-# Salesforce Auto-API     <img src="https://github.com/JulianKer/Salesforce-Auto-API-Extension/blob/main/icon_logo.png" alt="Salesforce Auto-API Logo" title="Salesforce Auto-API Logo" width="60" align="center"/>
+# Salesforce Auto-API     <img src="https://github.com/JulianKer/Salesforce-Auto-API-Extension/blob/main/imgs/icon_logo.png" alt="Salesforce Auto-API Logo" title="Salesforce Auto-API Logo" width="60" align="center"/>
 
 Salesforce Auto-API es una extensión para Google Chrome que convierte automáticamente los nombres de campos ingresados en Salesforce en **API Names válidos**, siguiendo el formato `snake_case`, con el objetivo de agilizar la configuración y evitar errores manuales.
 <br>
@@ -33,7 +33,7 @@ ______________________________________________
 
 ## 🔄 Ejemplo de conversión
 
-<img src="https://github.com/JulianKer/Salesforce-Auto-API-Extension/blob/refactor/icons/edit_element.png" width="30" align="center" /> <strong>Campos/Objetos u otras configuraciones: </strong>
+<img src="https://github.com/JulianKer/Salesforce-Auto-API-Extension/blob/refactor/icons/edit_element.png" width="30" align="center" /> <strong>Campos/Objetos y otras configuraciones: </strong>
   
 | Label ingresado        | API Name generado        |
 |------------------------|--------------------------|
@@ -41,7 +41,7 @@ ______________________________________________
 | N° de Teléfono / Móvil         | `n_de_telefono_movil`      |
 | Código Producto SF     | `codigo_producto_sf` |
 
-<img src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/record-triggered-flows/0f2675f8e3c0586be8533c1b39abb7a0_badge.png" alt="Flows Logo" title="Salesforce Auto-API Logo" width="30" align="center"/> <strong> Flows</strong>
+<img src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/record-triggered-flows/0f2675f8e3c0586be8533c1b39abb7a0_badge.png" alt="Flows Logo" title="Salesforce Auto-API Logo" width="35" align="center"/> <strong> Flows</strong>
 
 | Tipo de Flow         | Label generado        |API Name generado        |
 |------------------------|--------------------------|--------------------------|
