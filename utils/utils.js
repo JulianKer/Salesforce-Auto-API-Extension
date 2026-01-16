@@ -24,7 +24,7 @@ export function setLabelAndApiFirstTab(label, api){
 function generarOpcionesHorario(selectElementId) {
   const select = document.getElementById(selectElementId);
   for (let h = 0; h < 24; h++) {
-    for (let m = 0; m < 60; m += 30) {
+    for (let m = 0; m < 60; m += 15) {
       const hora = String(h).padStart(2, '0');
       const minuto = String(m).padStart(2, '0');
       const option = document.createElement("option");
