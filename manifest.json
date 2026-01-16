@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Salesforce Auto-API",
-  "version": "2.1",
+  "version": "2.2",
   "description": "Convierte automáticamente nombres de campos de Salesforce en API Names en snake_case.",
   "permissions": [],
   "host_permissions": [
