@@ -34,7 +34,7 @@ function setupCopyButton(buttonId, inputId) {
       });
     });
   }
-
+// botones de copy
   setupCopyButton("copyBtnOutputLabelRTF", "label");
   setupCopyButton("copyBtnOutputApiRTF", "apiName");
 
@@ -134,6 +134,8 @@ function generarLabelYApiNameSCF() {
 
 document.getElementById("objeto_scf").addEventListener("input", generarLabelYApiNameSCF);
 document.getElementById("accion_scf").addEventListener("input", generarLabelYApiNameSCF);
+
+// botones de copy
 setupCopyButton("copyBtnOutputLabelSCF", "label_scf");
 setupCopyButton("copyBtnOutputApiSCF", "apiName_scf");
 
@@ -178,7 +180,7 @@ document.getElementById("accion_alf").addEventListener("input", generarLabelYApi
 document.getElementById("descripcion_alf").addEventListener("input", generarLabelYApiNameALF);
 document.querySelectorAll('#invocadores_alf input[type="checkbox"]').forEach(cb => cb.addEventListener("change", generarLabelYApiNameALF));
 
-// buttons de copy
+// botones de copy
 setupCopyButton("copyBtnOutputLabelALF", "label_alf");
 setupCopyButton("copyBtnOutputApiALF", "apiName_alf");
 
@@ -220,8 +222,18 @@ function actualizarSTF() {
 ["inputAccionSTF", "selectFrecuenciaSTF", "selectHorarioSTF", "inputDescripcionSTF"]
   .forEach(id => document.getElementById(id).addEventListener("input", actualizarSTF));
 
-// Copiar botones
+// botones de copy
 setupCopyButton("copyBtnOutputLabelSTF", "labelSTF");
 setupCopyButton("copyBtnOutputApiSTF", "apiNameSTF");
 
 //--------------------------------------------------------------------
+
+
+// recalculo cuando cambie el toggle
+camelToggle.addEventListener("change", () => {
+  localStorage.setItem("camelCase", camelToggle.checked);
+  generarLabelYApiNameRTF();
+  generarLabelYApiNameSCF();
+  generarLabelYApiNameALF();
+  actualizarSTF();
+});

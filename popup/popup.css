@@ -116,6 +116,13 @@ button#formatBtn:hover {
   background-color: #0883d1;
 }
 
+
+.container_of_toggles{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .toggle-container {
   display: flex;
   align-items: center;
@@ -133,7 +140,7 @@ button#formatBtn:hover {
   position: relative;
   width: 40px;
   height: 20px;
-  background-color: #ccc;
+  background-color: #9d9d9d;
   border-radius: 12px;
   transition: background-color 0.3s ease;
   cursor: pointer;
@@ -158,6 +165,43 @@ button#formatBtn:hover {
 .toggle-container input[type="checkbox"]:checked + .toggle-slider::before {
   transform: translateX(20px);
 }
+
+
+
+/*--------------------- toggle de snake case o camel case -----------*/
+.toggle-slider-camel {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background-color: #9d9d9d;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.toggle-slider-camel::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.toggle-container input[type="checkbox"]:checked + .toggle-slider-camel {
+  background-color: #0B9BE8;
+}
+
+.toggle-container input[type="checkbox"]:checked + .toggle-slider-camel::before {
+  transform: translateX(20px);
+}
+
+
+
+/*_-----------------------------------------------------------------*/
 
 body.dark-mode {
   background-color: #2f2f2f;

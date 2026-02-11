@@ -1,11 +1,15 @@
 import { formatToApiName, guardarLS} from "../utils/utils.js";
 
 const toggle = document.getElementById("darkToggle");
+const camelToggle = document.getElementById("camelToggle");
 
 document.addEventListener("DOMContentLoaded", () => {
   const isDarkMode = localStorage.getItem("darkMode") === "true";
   toggle.checked = isDarkMode;
   document.body.classList.toggle("dark-mode", isDarkMode);
+
+  const camelCase = localStorage.getItem("camelCase") === "true";
+  camelToggle.checked = camelCase;
 
   const valorformateadoDelLC = localStorage.getItem("valorFormateado")
   const labelDelLC = localStorage.getItem("valorLabel")
@@ -24,22 +28,33 @@ toggle.addEventListener("change", () => {
   document.body.classList.toggle("dark-mode", toggle.checked);
 });
 
+camelToggle.addEventListener("change", () => {
+  localStorage.setItem("camelCase", camelToggle.checked);
+});
 
 const labelInput = document.getElementById("labelInput");
 const outputInput = document.getElementById("output");
 const trash = document.getElementById("trash");
 
-labelInput.addEventListener("keyup", () => {
-  const formatted = formatToApiName(labelInput.value);
+function updateApiName() {
+  const useCamel = camelToggle.checked;
+  const formatted = formatToApiName(labelInput.value, useCamel);
+
   outputInput.value = formatted;
-  guardarLS(labelInput.value, formatted)
+  guardarLS(labelInput.value, formatted);
+}
+
+labelInput.addEventListener("keyup", updateApiName);
+labelInput.addEventListener("blur", updateApiName);
+
+camelToggle.addEventListener("change", () => {
+  localStorage.setItem("camelCase", camelToggle.checked);
+  updateApiName();
 });
 
-labelInput.addEventListener("blur", () => {
-  const formatted = formatToApiName(labelInput.value);
-  outputInput.value = formatted;
-  guardarLS(labelInput.value, formatted)
-});
+const savedCamel = localStorage.getItem("camelCase") === "true";
+camelToggle.checked = savedCamel;
+updateApiName();
 
 trash.addEventListener("click", ()=>{
   labelInput.value = "";

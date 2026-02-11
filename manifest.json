@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Salesforce Auto-API",
-  "version": "2.2",
-  "description": "Convierte automáticamente nombres de campos de Salesforce en API Names en snake_case.",
+  "version": "3.0",
+  "description": "Convierte automáticamente nombres de campos de Salesforce en API Names en snake_case o cammelCase.",
   "permissions": [],
   "host_permissions": [
         "https://*.salesforce.com/*",
