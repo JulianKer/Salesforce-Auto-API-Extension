@@ -1,7 +1,7 @@
 
 # Salesforce Auto-API     <img src="https://github.com/JulianKer/Salesforce-Auto-API-Extension/blob/main/imgs/icon_logo.png" alt="Salesforce Auto-API Logo" title="Salesforce Auto-API Logo" width="60" align="center"/>
 
-Salesforce Auto-API es una extensión para Google Chrome que convierte automáticamente los nombres de campos ingresados en Salesforce en **API Names válidos**, siguiendo el formato `snake_case`, con el objetivo de agilizar la configuración y evitar errores manuales.
+Salesforce Auto-API es una extensión para Google Chrome que convierte automáticamente los nombres de campos ingresados en Salesforce en **API Names válidos**, siguiendo el formato `snake_case` o `camelcase`, con el objetivo de agilizar la configuración y evitar errores manuales.
 <br>
 ## 💡 Características
 
@@ -39,7 +39,7 @@ ______________________________________________
 |------------------------|--------------------------|
 | Nombre del Cliente     | `nombre_del_cliente` |
 | N° de Teléfono / Móvil         | `n_de_telefono_movil`      |
-| Código Producto SF     | `codigo_producto_sf` |
+| Código Producto SF     | `codigoProductoSf` |
 
 <img src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/record-triggered-flows/0f2675f8e3c0586be8533c1b39abb7a0_badge.png" alt="Flows Logo" title="Salesforce Auto-API Logo" width="35" align="center"/> <strong> Flows</strong>
 
@@ -48,7 +48,7 @@ ______________________________________________
 | Record-Triggered Flow     | `Account [RTF]  \| (CRT)-(ARR)  \| - Update Status  \| [SYN]` | `account_rtf_crt_arr_update_status_syn` |
 | Screen Flow         | `Case [SCF] - Create new record`      | `case_scf_create_new_record` |
 | Autolaunched Flow     | `Send Email [ALF] - (Notify Case Owner) \| [F]` | `send_email_alf_notify_case_owner_f` |
-| Schedule-Triggered Flow     | `Opportunity [STF] \| (W)-(22:30) \| - Send CSV File` | `opportunity_stf_w_22_30_send_csv_file` |
+| Schedule-Triggered Flow     | `Opportunity [STF] \| (W)-(22:30) \| - Send CSV File` | `opportunityStfW2230SendCsvFile` |
 
 ##   Instalación desde Chrome Web Store <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Chrome_icon_%282011%29.png" alt="Google Chrome" width="35" align="center"/>
 
