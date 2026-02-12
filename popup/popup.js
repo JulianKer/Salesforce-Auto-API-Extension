@@ -4,13 +4,16 @@ const toggle = document.getElementById("darkToggle");
 const camelToggle = document.getElementById("camelToggle");
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  //---- darkmode
   const isDarkMode = localStorage.getItem("darkMode") === "true";
   toggle.checked = isDarkMode;
   document.body.classList.toggle("dark-mode", isDarkMode);
 
-  const camelCase = localStorage.getItem("camelCase") === "true";
-  camelToggle.checked = camelCase;
+  //-- camelCase tiggle
+  camelToggle.checked = localStorage.getItem("camelCase") === "true";
 
+  //---- label y api que guardé en el localstorage 
   const valorformateadoDelLC = localStorage.getItem("valorFormateado")
   const labelDelLC = localStorage.getItem("valorLabel")
 
@@ -21,6 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
     label.value = labelDelLC
     formateado.value = valorformateadoDelLC
   }
+
+  // si hay un label, ejecuto el update para q calcule en snakeCase o viceversa pero si no hay un valor, que no haga nada pq sino pisa con vacíos el local stoage
+  if (labelDelLC.trim() !== "") updateApiName();
 });
 
 toggle.addEventListener("change", () => {
@@ -52,10 +58,6 @@ camelToggle.addEventListener("change", () => {
   updateApiName();
 });
 
-const savedCamel = localStorage.getItem("camelCase") === "true";
-camelToggle.checked = savedCamel;
-updateApiName();
-
 trash.addEventListener("click", ()=>{
   labelInput.value = "";
   outputInput.value = "";
@@ -75,6 +77,7 @@ function setupCopyButton(buttonId, inputElement) {
       setTimeout(() => {
         icon.className = originalIconClass;
       }, 1500);
+
     }).catch(() => {
       alert("Error al copiar");
     });
@@ -87,9 +90,7 @@ setupCopyButton("copyBtnOutput", outputInput);
 
 
 
-
-
-// Tabs
+// ---Tabs
 document.querySelectorAll(".tab-button").forEach((btn) => {
   btn.addEventListener("click", () => {
     const tab = btn.dataset.tab;

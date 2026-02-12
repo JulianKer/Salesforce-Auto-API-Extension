@@ -53,4 +53,5 @@ generarOpcionesHorario("selectHorarioSTF");
 export function guardarLS(label, api) {
   localStorage.setItem("valorLabel", label)
   localStorage.setItem("valorFormateado", api)
+  console.log("Guardado en local:", label, api);
 }
