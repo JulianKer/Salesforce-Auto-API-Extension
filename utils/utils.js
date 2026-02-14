@@ -55,3 +55,17 @@ export function guardarLS(label, api) {
   localStorage.setItem("valorFormateado", api)
   console.log("Guardado en local:", label, api);
 }
+
+export function cargarFechaYVersion() {
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  fetch("./manifest.json")
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("version").textContent = data.version; // le hice fetch al manifest asi no tengo que cambiar la versión por cada update q le hago a la extension
+    })
+    .catch(error => {
+      console.error("Error cargando versión:", error);
+    });
+}

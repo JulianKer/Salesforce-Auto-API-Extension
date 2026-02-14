@@ -1,9 +1,11 @@
-import { formatToApiName, guardarLS} from "../utils/utils.js";
+import { formatToApiName, guardarLS, cargarFechaYVersion} from "../utils/utils.js";
 
 const toggle = document.getElementById("darkToggle");
 const camelToggle = document.getElementById("camelToggle");
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  cargarFechaYVersion();
 
   //---- darkmode
   const isDarkMode = localStorage.getItem("darkMode") === "true";
